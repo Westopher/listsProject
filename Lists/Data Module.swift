@@ -31,13 +31,34 @@ var lists = [List]() { didSet {lists.sort() {$0.title < $1.title } } }
 
 func loadLists() {
     
+    guard let retrievedData = UserDefaults.standard.dictionary(forKey: "ListofLists") else { return }
+    lists.removeAll()
     
-    
+    let dictionaryOfArraysOfArrays = retrievedData as! [String:[[Any]]]
+    for (listTitle, listItems) in dictionaryOfArraysOfArrays {
+        let newList = List(listTitle: listTitle)
+        let arrayOfArrays = listItems
+        for array in arrayOfArrays {
+            newList.items.append(ListItem(itemTitle: array[0] as! String, checked: array[1] as! Bool)!)
+        }
+        lists.append(newList)
+    }
 }
 
 func saveLists() {
     
-    
+    var dictionaryofArraysofArrays = [String:[[Any]]]()
+    for list in lists {
+        var arrayOfArrays = [[Any]]()
+        for listItem in list.items {
+            var array = [Any]()
+            array.append(listItem.title)
+            array.append(listItem.checked)
+            arrayOfArrays.append(array)
+        }
+        dictionaryofArraysofArrays[list.title] = arrayOfArrays
+    }
+    UserDefaults.standard.set(dictionaryofArraysofArrays, forKey: "ListofLists")
     
 }
 
