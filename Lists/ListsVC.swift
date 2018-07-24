@@ -43,6 +43,7 @@ class ListsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let listItemsVC = segue.destination as! ListItemsVC
         listItemsVC.list = lists[(listsTableView.indexPathForSelectedRow?.row)!]
+        listItemsVC.navigationItem.title = listItemsVC.list.title
         
     }
     
