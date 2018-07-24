@@ -8,7 +8,6 @@ class ListTitleTVCell: UITableViewCell {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -20,7 +20,8 @@ class ListItemsVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let listItemTVCell = tableView.dequeueReusableCell(withIdentifier: "ListItemTVCell", for: indexPath) as! ListItemTVCell
-        listItemTVCell.itemNameLabel.text = list.items[indexPath.row].title
+        listItemTVCell.item = list.items[indexPath.row]
+        listItemTVCell.itemNameLabel.text = listItemTVCell.item.title
         return listItemTVCell
     }
     

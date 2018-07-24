@@ -8,8 +8,13 @@ class ListItemTVCell: UITableViewCell {
     
     @IBOutlet weak var itemNameLabel: UILabel!
     
+    var item: ListItem!
+    
     @IBAction func checkButtonTapped(_ sender: Any) {
+        item.checked = !item.checked
+        checkButton.setImage(item.checked ? UIImage(named: "Checked") : UIImage(named: "Unchecked"), for: .normal)
     }
+    
     
     
     override func awakeFromNib() {
