@@ -14,9 +14,23 @@ class ListsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
 
     // MARK: - TableView DataSource methods
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lists.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let listTitleTVCell = tableView.dequeueReusableCell(withIdentifier: "ListTitleTVCell", for: indexPath) as! ListTitleTVCell
+        listTitleTVCell.listTitleLabel.text = lists[indexPath.row].title
+        return listTitleTVCell
+    }
     
     // MARK: - TableView Delegate methods
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == . delete {
+            lists.remove(at: indexPath.row)
+            tableView.deleteRows(at: [IndexPath], with: .fade)
+        }
+    }
     
     
     // MARK: - UI responsive methods
