@@ -2,7 +2,7 @@
 
 import UIKit
 
-class ListsVC: UIViewController {
+class ListsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var newListNameTextField: UITextField!
     
@@ -13,11 +13,26 @@ class ListsVC: UIViewController {
 
     }
 
+    // MARK: - TableView DataSource methods
+    
+    
+    // MARK: - TableView Delegate methods
+    
+    
+    // MARK: - UI responsive methods
+    
+    
     @IBAction func addListButtonTapped(_ sender: Any) {
         
     }
     
 
+
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
