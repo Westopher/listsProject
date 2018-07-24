@@ -5,19 +5,15 @@ import UIKit
 class ListItemsVC: UIViewController {
 
     @IBOutlet weak var newItemNameTextField: UITextField!
-    
     @IBOutlet weak var itemsTableView: UITableView!
+    
+    var list: List!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func addItemButtonTapped(_ sender: Any) {
         
