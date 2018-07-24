@@ -28,16 +28,15 @@ class ListsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == . delete {
             lists.remove(at: indexPath.row)
-            tableView.deleteRows(at: [IndexPath], with: .fade)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
-    
     // MARK: - UI responsive methods
-    
-    
     @IBAction func addListButtonTapped(_ sender: Any) {
-        
+        if newListNameTextField.text == "" { return }
+        lists.append(List(listTitle: newListNameTextField.text!)!)
+        listsTableView.reloadData()
     }
     
 
