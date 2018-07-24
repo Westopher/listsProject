@@ -1,6 +1,8 @@
 
 import UIKit
 
+// MARK: - Data Model
+
 class ListItem {
     var title: String
     var checked: Bool
@@ -24,3 +26,22 @@ class List {
 }
 
 var lists = [List]() { didSet {lists.sort() {$0.title < $1.title } } }
+
+// MARK: - Methods for persistent storage
+
+func loadLists() {
+    
+    
+    
+}
+
+func saveLists() {
+    
+    
+    
+}
+
+
+
+
+
