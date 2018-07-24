@@ -4,15 +4,17 @@ import UIKit
 
 class ListsVC: UIViewController {
 
+    @IBOutlet weak var newListNameTextField: UITextField!
+    
+    @IBOutlet weak var listsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func addListButtonTapped(_ sender: Any) {
+        
     }
     
 

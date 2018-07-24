@@ -4,6 +4,10 @@ import UIKit
 
 class ListItemsVC: UIViewController {
 
+    @IBOutlet weak var newItemNameTextField: UITextField!
+    
+    @IBOutlet weak var itemsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -15,7 +19,10 @@ class ListItemsVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func addItemButtonTapped(_ sender: Any) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

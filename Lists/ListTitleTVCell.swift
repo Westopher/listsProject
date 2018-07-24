@@ -4,6 +4,11 @@ import UIKit
 
 class ListTitleTVCell: UITableViewCell {
 
+    @IBOutlet weak var listTitleLabel: UILabel!
+    
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
