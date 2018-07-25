@@ -39,10 +39,13 @@ func loadLists() {
         let newList = List(listTitle: listTitle)
         let arrayOfArrays = listItems
         for array in arrayOfArrays {
-            newList.items.append(ListItem(itemTitle: array[0] as! String, checked: array[1] as! Bool)!)
+            newList?.items.append(ListItem(itemTitle: array[0] as! String, checked: array[1] as! Bool)!)
         }
-        lists.append(newList)
+        lists.append(newList!)
     }
+    
+    print("Retrieved Data: \(retrievedData) \n")
+    print("Dictionary of Arrays of Arrays: \(dictionaryOfArraysOfArrays) \n")
 }
 
 func saveLists() {

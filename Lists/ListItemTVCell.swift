@@ -13,6 +13,7 @@ class ListItemTVCell: UITableViewCell {
     @IBAction func checkButtonTapped(_ sender: Any) {
         item.checked = !item.checked
         checkButton.setImage(item.checked ? UIImage(named: "Checked") : UIImage(named: "Unchecked"), for: .normal)
+        saveLists()
     }
     
     

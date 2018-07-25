@@ -31,6 +31,7 @@ class ListItemsVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         if editingStyle == . delete {
             list.items.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            saveLists()
         }
     }
     
@@ -40,6 +41,7 @@ class ListItemsVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         if newItemNameTextField.text == "" { return }
         list.items.append(ListItem(itemTitle: newItemNameTextField.text!)!)
         itemsTableView.reloadData()
+        saveLists()
     }
     
     /*

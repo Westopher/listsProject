@@ -10,7 +10,7 @@ class ListsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadLists()
     }
 
     // MARK: - TableView DataSource methods
@@ -29,6 +29,7 @@ class ListsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         if editingStyle == . delete {
             lists.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            saveLists()
         }
     }
     
@@ -37,6 +38,7 @@ class ListsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         if newListNameTextField.text == "" { return }
         lists.append(List(listTitle: newListNameTextField.text!)!)
         listsTableView.reloadData()
+        saveLists()
     }
     
     // MARK: - Navigation
