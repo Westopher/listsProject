@@ -22,6 +22,7 @@ class ListItemsVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         let listItemTVCell = tableView.dequeueReusableCell(withIdentifier: "ListItemTVCell", for: indexPath) as! ListItemTVCell
         listItemTVCell.item = list.items[indexPath.row]
         listItemTVCell.itemNameLabel.text = listItemTVCell.item.title
+        listItemTVCell.font = listItemTVCell.checked ? UIFont.systemFont(ofSize: 17, weight: .bold) : UIFont.systemFont(ofSize: 17, weight: .regular)
         listItemTVCell.checkButton.setImage(listItemTVCell.item.checked ? UIImage(named: "Checked") : UIImage(named: "Unchecked"), for: .normal)
         return listItemTVCell
     }

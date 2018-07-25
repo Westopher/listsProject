@@ -12,6 +12,10 @@ class ListsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         loadLists()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        listsTableView.contentInset = UIEdgeInsets(top: listsTableView.frame.height / 38, left: 0, bottom: 0, right: 0)
+    }
 
     // MARK: - TableView DataSource methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
