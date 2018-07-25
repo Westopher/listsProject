@@ -62,7 +62,7 @@ func saveLists() {
         dictionaryofArraysofArrays[list.title] = arrayOfArrays
     }
     UserDefaults.standard.set(dictionaryofArraysofArrays, forKey: "ListofLists")
-    
+    print("Dictionary of Arrays of Arrays: \(dictionaryofArraysofArrays) \n")
 }
 
 
