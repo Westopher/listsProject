@@ -16,6 +16,7 @@
 		0D3F48D21FB37B5C000D451B /* ListItemsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F48D11FB37B5C000D451B /* ListItemsVC.swift */; };
 		0D3F48D41FB37B93000D451B /* ListTitleTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F48D31FB37B93000D451B /* ListTitleTVCell.swift */; };
 		0D3F48D61FB37BB1000D451B /* ListItemTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F48D51FB37BB1000D451B /* ListItemTVCell.swift */; };
+		3D8471C9210A4E91002C5CA9 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8471C8210A4E91002C5CA9 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0D3F48D11FB37B5C000D451B /* ListItemsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsVC.swift; sourceTree = "<group>"; };
 		0D3F48D31FB37B93000D451B /* ListTitleTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTitleTVCell.swift; sourceTree = "<group>"; };
 		0D3F48D51FB37BB1000D451B /* ListItemTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemTVCell.swift; sourceTree = "<group>"; };
+		3D8471C8210A4E91002C5CA9 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				0D3F48D11FB37B5C000D451B /* ListItemsVC.swift */,
 				0D3F48D31FB37B93000D451B /* ListTitleTVCell.swift */,
 				0D3F48D51FB37BB1000D451B /* ListItemTVCell.swift */,
+				3D8471C8210A4E91002C5CA9 /* NavigationController.swift */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				0D3F48D61FB37BB1000D451B /* ListItemTVCell.swift in Sources */,
 				0D3F48BC1FB37AB0000D451B /* AppDelegate.swift in Sources */,
 				0D3F48D41FB37B93000D451B /* ListTitleTVCell.swift in Sources */,
+				3D8471C9210A4E91002C5CA9 /* NavigationController.swift in Sources */,
 				0D3F48D21FB37B5C000D451B /* ListItemsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
